@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProductController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Product Catalog</h1>
+    <div>
+        <a href="{{ path('product_catalog_download') }}">Download CSV</a>
+    </div>
+    
+    {# <h1>Product List</h1>
+    <div>
+        {% if productData %}
+            <p><strong>EAN:</strong> {{ productData.ean }}</p>
+            <p><strong>Manufacturer Item Code:</strong> {{ productData.manufacturerItemCode }}</p>
+            <p><strong>Item Description:</strong> {{ productData.itemDescription }}</p>
+            <p><strong>Product Primary Category:</strong> {{ productData.productPrimaryCategory.categoryNodeName }}</p>
+            <p><strong>Product Secondary Category:</strong> {{ productData.productSecondaryCategory.categoryNodeName }}</p>
+            <p><strong>Product Primary Brand:</strong> {{ productData.productPrimaryBrand.brandNodeName }}</p>
+            <p><strong>Weight:</strong> {{ productData.weight }} {{ productData.unitOfMeasure }}</p>
+            <p><strong>Unit Net Price:</strong> {{ productData.unitNetPrice }}</p>
+            <p><strong>Unit Retail Price:</strong> {{ productData.unitRetailPrice }}</p>
+            <p><strong>Tax Rate:</strong> {{ productData.taxRate }}</p>
+            <p><strong>Item Tax Rate:</strong> {{ productData.itemTaxRate }}</p>
+            <p><strong>Item Tax Category Code:</strong> {{ productData.itemTaxCategoryCode }}</p>
+            <p><strong>Warranty Length:</strong> {{ productData.warrantyLength }} months</p>
+            <div>
+                <h4>Specifications</h4>
+                <ul>
+                    {% for attribute in productData.specification.attributes %}
+                        <li>
+                            <strong>{{ attribute.name }}:</strong> {{ attribute.values[0].displayValue }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div>
+                <h4>Pictures</h4>
+                {% for picture in productData.pictures %}
+                    <img src="{{ picture.url }}" alt="Picture of {{ productData.itemDescription }}" width="200">
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>No data available.</p>
+        {% endif %}
+    </div>#}
+</div> 
+{% endblock %}
